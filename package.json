@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "express": "^4.17.1",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
@@ -13,12 +14,7 @@
     "@babel/preset-react": "^7.9.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint . --fix",
-      "git add"
-    ]
+    "eslint-plugin-import": "^2.20.2",
+    "serverless-openwhisk": "^0.18.4"
   }
 }
