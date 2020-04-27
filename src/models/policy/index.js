@@ -1,7 +1,8 @@
-import * as methods from './methods'
+'use strcit';
+const methods = require('./methods')
 
 class Policy {
   async getCompanyCost () { return methods.getCompanyCost() }
 }
 
-export default new Policy()
+module.exports = new Policy()

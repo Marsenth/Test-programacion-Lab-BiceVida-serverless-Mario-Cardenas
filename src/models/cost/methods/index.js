@@ -1,3 +1,4 @@
+'use strict';
 const costs = {
   policyCosts: {
     lifeHealth: {
@@ -13,16 +14,18 @@ const costs = {
   },
 }
 
-export const getPolicyCosts = (worker, settings) => {
-  if (worker.age > 65) return 0
+module.exports = {
+  getPolicyCosts: (worker, settings) => {
+    if (worker.age > 65) return 0
 
-  const { childs } = worker
-  const { has_dental_care, company_percentage } = settings
-  const { policyCosts: { lifeHealth, dental } } = costs
-  const costKey = childs < 2 ? childs : 2
+    const { childs } = worker
+    const { has_dental_care, company_percentage } = settings
+    const { policyCosts: { lifeHealth, dental } } = costs
+    const costKey = childs < 2 ? childs : 2
 
-  // calculate company percent amount
-  return (company_percentage / 100) * (
-    lifeHealth[costKey] + (has_dental_care ? dental[costKey] : 0)
-  )
+    // calculate company percent amount
+    return (company_percentage / 100) * (
+      lifeHealth[costKey] + (has_dental_care ? dental[costKey] : 0)
+    )
+  }
 }

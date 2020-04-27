@@ -1,17 +1,11 @@
 {
-    "extends": ["airbnb-base"],
-    "env": {
-      "mocha": true
-    },
     "rules": {
-      "semi": ["error",  "never", { "beforeStatementContinuationChars": "always" }],
-      "import/prefer-default-export": "off",
-      "class-methods-use-this": "off",
-      "space-before-function-paren": "off",
-      "camelcase": "off"
+      "quotes": ["error", "single"],
+      "max-len": ["error", {"code":100, "tabWidth": 4, "ignoreStrings": true,"ignoreTemplateLiterals": true, "ignoreComments":true}],
+      "space-before-function-paren": 1
     },
     "parserOptions": {
-      "ecmaVersion": 2019
+      "ecmaVersion": 2018
     }
   }
   

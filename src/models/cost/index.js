@@ -1,4 +1,5 @@
-import * as methods from './methods'
+'use strict';
+const methods = require('./methods')
 
 class Cost {
   getPolicyCosts () {
@@ -6,4 +7,4 @@ class Cost {
   }
 }
 
-export default new Cost()
+module.exports = new Cost()

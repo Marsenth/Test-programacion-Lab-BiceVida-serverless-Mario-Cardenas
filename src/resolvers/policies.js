@@ -1,11 +1,12 @@
-import Policy from '../models/policy'
+'use strict';
+const Policy = require('../models/policy')
 
-export const getCompanyCost = async (_, res) => {
+module.exports.getCompanyCost = async () => {
   const { data, error } = await Policy.getCompanyCost()
 
   if (error) {
-    res.status(500).json(error)
+    throw new Error(error)
   } else {
-    res.status(200).json(data)
+    return data
   }
 }
